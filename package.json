@@ -2,6 +2,7 @@
   "name": "dadata-viget",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://zaurdk.github.io/Search-Component",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "dadata-suggestions": "^1.1.1",
@@ -23,5 +24,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }

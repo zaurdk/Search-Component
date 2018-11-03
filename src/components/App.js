@@ -30,6 +30,14 @@ class App extends Component {
     this.getInfo();
   }
 
+  suggestionSubmit = (value) => {
+    if (value) {
+      this.setState({
+        query: value
+      })
+    }
+  }
+
   render() {
     return (
       <form>
@@ -42,6 +50,7 @@ class App extends Component {
         <Suggestions 
           results={this.state.results} 
           queryLenght={this.state.query.length}
+          suggestionSubmit={this.suggestionSubmit.bind(this)}
         />
       </form>
     )

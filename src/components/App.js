@@ -33,6 +33,7 @@ class App extends Component {
   render() {
     return (
       <form>
+        <h1 style={{'textAlign': 'center', 'color': 'cadetblue'}}>Форма поиска</h1>
         <input className="form-control form-control-lg mx-auto" style = {{'width': '50%'}}
           placeholder="Введите имя, фамилию или отчество..."
           ref={input => this.search = input}

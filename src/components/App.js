@@ -30,14 +30,6 @@ class App extends Component {
     this.getInfo();
   }
 
-/*   suggestionSubmit = (event) => {
-    if (event !== undefined) {
-      this.setState({
-        query: event.target.getAttribute('key')
-      })
-    }
-  }
- */
   render() {
     return (
       <form>
@@ -50,7 +42,6 @@ class App extends Component {
         <Suggestions 
           results={this.state.results} 
           queryLenght={this.state.query.length}
-          suggestionSubmit={this.suggestionSubmit.bind(this)}
         />
       </form>
     )

@@ -30,10 +30,10 @@ class App extends Component {
     this.getInfo();
   }
 
-  suggestionSubmit = (value) => {
-    if (value) {
+  suggestionSubmit = (event) => {
+    if (event !== undefined) {
       this.setState({
-        query: value
+        query: event.target.getAttribute('key')
       })
     }
   }

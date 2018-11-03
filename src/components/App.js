@@ -33,12 +33,15 @@ class App extends Component {
   render() {
     return (
       <form>
-        <input class="form-control form-control-lg mx-auto" style = {{'width': '50%'}}
+        <input className="form-control form-control-lg mx-auto" style = {{'width': '50%'}}
           placeholder="Введите имя, фамилию или отчество..."
           ref={input => this.search = input}
           onChange={this.handleInputChange}
         />
-        <Suggestions results={this.state.results} />
+        <Suggestions 
+          results={this.state.results} 
+          queryLenght={this.state.query.length}
+        />
       </form>
     )
   }

@@ -36,6 +36,7 @@ class App extends Component {
         query: value
       })
     }
+    this.search.value = value;
   }
 
 

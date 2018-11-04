@@ -13,17 +13,8 @@ class App extends Component {
     results: []
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.state.query === '') {
-      console.log('-----------')
-      this.setState({
-        results: []
-      })
-    }
-  }
-
   getInfo = () => {
-    dadata.fio({ query: this.state.query, count: 5 })
+    dadata.fio({ query: this.search.value, count: 5 })
       .then((data) => {
         this.setState({
           results: data
@@ -32,10 +23,10 @@ class App extends Component {
   }
 
   handleInputChange = () => {
-    this.setState({
+      this.setState({
       query: this.search.value
     })
-    
+        
     this.getInfo();
   }
 

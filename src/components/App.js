@@ -13,6 +13,15 @@ class App extends Component {
     results: []
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.state.query === '') {
+      console.log('-----------')
+      this.setState({
+        results: []
+      })
+    }
+  }
+
   getInfo = () => {
     dadata.fio({ query: this.state.query, count: 5 })
       .then((data) => {
@@ -35,8 +44,11 @@ class App extends Component {
       this.setState({
         query: value
       })
+      this.search.value = value;
+      this.setState({
+        results: []
+      })
     }
-    this.search.value = value;
   }
 
 

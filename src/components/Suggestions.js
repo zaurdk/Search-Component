@@ -3,7 +3,7 @@ import React from 'react'
 
 const Suggestions = ({ results: { suggestions }, suggestionSubmit, queryLenght }) => (
   Boolean(suggestions) && (
-    <ul className="list-group" style={{'listStyleType': 'none'}}>
+    <ul className="list-group" style={{'listStyleType': 'none', 'cursor': 'pointer'}}>
       {
         suggestions.map(({ value }) => (
           <li className="list-group-item mx-auto"
